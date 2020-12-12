@@ -17,13 +17,11 @@ void solve() {
 		cin >> a[i];
 	int id=0, par=1;
 	for(int i=0; i<n-1; ++i) {
-		if(a[i]==a[i+1])
+		if(a[i]<=a[i+1]&&abs(a[i]-a[i+1])<=u)
 			id=i+1;
-		else if(a[i]<a[i+1]&&abs(a[i]-a[i+1])<=u)
+		else if(a[i]>=a[i+1]&&abs(a[i]-a[i+1])<=d)
 			id=i+1;
-		else if(a[i]>a[i+1]&&abs(a[i]-a[i+1])<=d)
-			id=i+1;
-		else if(a[i]>a[i+1]&&par!=0) {
+		else if(a[i]>=a[i+1]&&par!=0) {
 			par=0;
 			id=i+1;
 		} else
