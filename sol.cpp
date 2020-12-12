@@ -17,9 +17,9 @@ void solve() {
 		cin >> a[i];
 	int id=0, par=1;
 	for(int i=0; i<n-1; ++i) {
-		if(a[i]<=a[i+1]&&abs(a[i]-a[i+1])<=u)
+		if(a[i]<=a[i+1]&&a[i+1]-a[i]<=u)
 			id=i+1;
-		else if(a[i]>=a[i+1]&&abs(a[i]-a[i+1])<=d)
+		else if(a[i]>=a[i+1]&&a[i]-a[i+1]<=d)
 			id=i+1;
 		else if(a[i]>=a[i+1]&&par!=0) {
 			par=0;
